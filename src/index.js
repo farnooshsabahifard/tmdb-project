@@ -3,18 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import All from './component/all'
-import Movie from './component/movie';
-import Tv from './component/tv';
-import Person from './component/person';
+import MovieList from './component/movieList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <Fragment>
-  <All></All>
-  <Movie></Movie>
-  <Tv></Tv>
-  <Person></Person>
+ <MovieList byType="all" title="week trends ALL" byTime="week"/>
+ <MovieList byType="tv" title="week trends MOVIE" byTime="week"/>
+ <MovieList byType="movie" title="week trends TYPE" byTime="week"/>
+ <MovieList byType="person" title="week trends PERSON" byTime="week"/>
+ <MovieList byType="all" title=" day trends ALL " byTime="day"/>
+ <MovieList byType="tv" title=" day trends MOVIE" byTime="day"/>
+ <MovieList byType="movie" title="day trends TYPE" byTime="day"/>
+ <MovieList byType="person" title="day trends PERSON" byTime="day"/>
  </Fragment>
 );
 
